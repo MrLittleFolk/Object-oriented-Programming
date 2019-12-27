@@ -1,0 +1,12 @@
+#include "Figures.h"
+int main()
+{
+  { // Start block of command
+    Point2D P;  // Declaration and create object of Point2D class
+    P.Set(7.2, 4.3);
+    P.Move(2.7, 4.1);
+  } // End of block of command
+  // Object P is deleted
+  Circle Cir; // Declaration and create object Cir of Circle class
+  // Other commands
+}
