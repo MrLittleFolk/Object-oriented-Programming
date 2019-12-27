@@ -1,0 +1,47 @@
+#include "Figures.h"  // in order to know class Point2D and Circle structure
+
+void Point2D::Set(double Xo, double Yo)
+{
+  X = Xo;
+  Y = Yo;
+  // equivalent to this->X = Xo, this->Y = Yo;
+}
+
+void Point2D::Move(double dX, double dY)
+{
+  X += dX;
+  Y += dY;
+}
+
+void Point2D::Scale(double sX, double sY)
+{
+  X *= sX;
+  Y *= sY;
+}
+
+const double pi = 3.14159;
+
+void Circle::Set(double Xo, double Yo, double r)
+{
+  Center.Set(Xo, Yo); // hail Point2D mode
+  
+  if (r < 0)  
+    r = 0;  // make sure the radius is not negative
+    
+  this->Radius = r; // equivalent to assign Radius = r
+}
+
+void Circle::Move(double dX, double dY)
+{
+  Center.Move(dX, dY);  // hail Point2D mode
+}
+
+double Circle::Area()
+{
+  return pi * Radius * Radius;
+}
+
+double Circle::Perimeter()
+{
+  return 2 * pi * Radius;
+}
