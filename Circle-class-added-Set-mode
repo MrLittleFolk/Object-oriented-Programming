@@ -1,0 +1,17 @@
+class Circle {
+  Point2D Center;
+  double Radius;
+public: 
+  void Set(double Xo, double Yo, double r);
+  void Set(double r); // Mode added
+  void Move(double dX, double dY);
+  double Area();
+  double Perimeter();
+};  // end declaration of the Circle class
+
+// Added a Set() mode in Figures.cpp file
+void Circle::Set(double r)
+{
+  if (r >= 0)
+    Radius = r;
+}
