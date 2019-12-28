@@ -1,0 +1,19 @@
+#include "Figures.h"
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+  Circle* mycir;  // don't have object yet
+  mycir = new Circle();
+  if (mycir != NULL) {
+    mycir->Set(20, 20, 100);
+    double mArea = mycir->Area();
+    cout << "Area of circle = " << mArea;
+    delete myCir; // Delete object
+    mycir = NULL;
+    cin.get();
+  }
+}
+
